@@ -15,6 +15,7 @@ def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
     two_circles()
+    circle_and_rectangle()
 
 def two_circles():
 
@@ -45,7 +46,7 @@ def two_circles():
     -- Waits for the user to press the mouse, then closes the window.
 """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its doc-string above.
+    # done: 2. Implement this function, per its doc-string above.
     #    -- ANY two rg.Circle objects that meet the criteria are fine.
     #    -- File  COLORS.txt  lists all legal color-names.
     # Put a statement in   main   to test this function
@@ -54,6 +55,38 @@ def two_circles():
 
 
 def circle_and_rectangle():
+
+    window = rg.RoseWindow()
+    center_point= rg.Point(300,100)
+    radius = 50
+    circle = rg.Circle(center_point,radius)
+    circle.fill_color = 'blue'
+    circle.outline_thickness = 1
+    circle.attach_to(window)
+
+    point1 = rg.Point(100, 150)
+    point2 = rg.Point(200, 50)
+    rectangle = rg.Rectangle(point1, point2)
+    rectangle.fill_color = 'red'
+    rectangle.outline_thickness = 1
+    rectangle.attach_to(window)
+    window.render()
+
+    print('circle')
+    print('1')
+    print('blue')
+    print(center_point)
+    print('300x')
+    print('100y')
+
+    print('rectangle')
+    print('1')
+    print('red')
+    print('150,100')
+    print('150')
+    print('100')
+    window.close_on_mouse_click()
+
     """
     -- Constructs an rg.RoseWindow.
     -- Constructs and draws a rg.Circle and rg.Rectangle
@@ -85,7 +118,7 @@ def circle_and_rectangle():
            150.0
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # Done: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
